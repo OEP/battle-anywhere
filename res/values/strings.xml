@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, BattleAnywhere!</string>
+    <string name="app_name">BattleAnywhere!</string>
+<string name="label_hp">HP:</string>
+<string name="label_level">Lvl:</string>
+
+<string name='atk_flick'>Flick</string>
+<string name='atk_punch'>Punch</string>
+<string name='atk_kick'>Kick</string>
+
+<string name='label_attack'>Attack</string>
+<string name='label_defend'>Defend</string>
+<string name='label_item'>Item</string>
+
+<string name='label_strong'>Strong</string>
+<string name='label_quick'>Quick</string>
+<string name='label_smart'>Smart</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    
+    <FrameLayout android:id="@+id/activity_block" android:layout_width="fill_parent" android:layout_height="wrap_content"><LinearLayout android:id="@+id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+    
+	    <Button android:text="@string/label_attack" android:id="@+id/button_attack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+	    
+	    <Button android:text="@string/label_defend" android:id="@+id/button_defend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+	    
+	    <Button android:text="@string/label_item" android:id="@+id/button_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+    
+</LinearLayout><LinearLayout android:id="@+id/attack_select_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:visibility="gone">
+    
+    	<!-- Contents added via code -->
+	   
+    </LinearLayout><LinearLayout android:id="@+id/stat_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:visibility="gone">
+    
+	    <Button android:text="@string/label_strong" android:id="@+id/button_strong" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+	    
+	    <Button android:text="@string/label_quick" android:id="@+id/button_quick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+	    
+	    <Button android:text="@string/label_smart" android:id="@+id/button_smart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" />
+    </LinearLayout><LinearLayout android:id="@+id/item_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:visibility="gone">
+    
+	    <!-- Contents variable: items -->
+    </LinearLayout></FrameLayout>
+    
+    
+    
+    
+    
+    
+    
+    
+    <LinearLayout android:id="@+id/FrameLayout01" android:layout_height="fill_parent" android:layout_weight="1" android:layout_width="fill_parent" android:orientation="vertical">
+    	<org.oep.crawler.views.Battlefield
+    		android:layout_width="fill_parent"
+    		android:layout_height="fill_parent"
+    		android:id="@+id/battle_battlefield"
+		/>
+	
+
+</LinearLayout>
+    
+    
+
+
+</LinearLayout>

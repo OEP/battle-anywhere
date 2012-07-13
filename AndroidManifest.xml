@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.oep.battle"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        
+    <activity android:name="org.oep.crawler.BattleActivity">
+</activity>
+<activity android:name="org.oep.crawler.WorldActivity"><intent-filter><category android:name="android.intent.category.DEFAULT"></category>
+<category android:name="android.intent.category.LAUNCHER"></category>
+<action android:name="android.intent.action.MAIN"></action>
+</intent-filter>
+
+</activity>
+</application>
+    <uses-sdk android:minSdkVersion="2" />
+
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+</manifest> 

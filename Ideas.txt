@@ -1,0 +1,67 @@
+== MAIN IDEA ==
+A procedurally generated RPG based off of Bluetooth device ID's or
+any other type of uniquely identifying seed.
+
+These seeds correspond to creatures which fight in turn-based battles. In the
+case that the seed is representative of a Bluetooth MAC it corresponds to a
+hero. If it's just a random number, it corresponds to a trash creature
+that a hero might fight.
+
+== CORE ATTRIBUTES & ABILITY SETS ==
+All creatures have three basic attributes: Strong, Quick, and Smart. In the
+world, all creature have a primary score in one of these three attributes.
+Additionally, for each of these attributes there are a set of abilities
+which attack against one of the other core attributes. We will outline
+these ability types.
+
+== OTHER ABILITY PERKS ==
+
+* Strong increases the amount of Max HP per level a creature gains.
+* Quick increases the frequency at which the creature can attack.
+* Mind increases experience gained per battle.
+
+== BATTLE SYSTEM ==
+The battle system is turn-based. The player can make basic attacks, use
+abilities, or items. Abilities are limited by a system similar to traditional
+MP.
+
+=== The Generalized Damage Formula ===
+All attacks follow the following generalized damage formula:
+
+DMG = MAX( (ATK - DEF) + SUM(DICE), 1 ) * (AMP / DMP)
+
+Where:re
+* ATK is the attacking ability
+* DEF is the defending ability
+* DICE is a sequence of dice rolls
+* AMP is an amplifying factor
+* DMP is a dampening  factor
+
+=== The Ability Stack ===
+Every odd-numbered level the creature will get a new primary ability. Abilities
+are governed by the first six digits of the MAC address (company make). The type of
+attribute it uses as its attack is governed by that as well. Its target
+is determined by the latter part of the MAC address.
+
+Every third level, a creature will get a "wildcard" ability according to
+its secondary attribute. The target will be determined randomly (but procedurally).
+
+=== The Status Effect Stack ===
+Every even-numbered level, the player will get a new status-affecting
+attribute added to their previous ability. The status effect is determined
+by the latter part of the MAC address.
+
+The below figure shows the progression of the ability, wildcard, and status
+affecting stacks. This would be for a creature of level 6. The number inside
+the stack represent which tier attack is inherited at that level.
+
+=============================
+	 ___	 ___	 ___
+6	|___|	|_2_|	|_3_|
+5	|_3_|	|___|	|___|
+4	|___|	|___|	|_2_|
+3	|_2_|	|_1_|	|___|
+2 	|___|	|___|	|_1_|
+1	|_1_|	|___|	|___|
+=============================
+Lvl	 Abl.	 Wld.	Stat.

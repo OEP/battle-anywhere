@@ -1,0 +1,12 @@
+<attacks>
+	<!-- These attacks use the 'Strong' attribute -->
+	<set name='strong'>
+		<attack level='1' name='@string/atk_flick' dice='1d4' />
+		<attack level='2' name='@string/atk_punch' dice='1d6' />
+		<attack level='3' name='@string/atk_kick' dice='1d8' />
+	</set>
+	
+	<!-- These attacks use the 'Quick' attribute -->
+	<set name='quick'>
+	</set>
+</attacks>
